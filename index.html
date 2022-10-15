@@ -1,0 +1,640 @@
+<!-- prettier-ignore -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Git and Github CMD" />
+  <meta name="keywords" content="git, github" />
+  <meta name="author" content="Justin Gandecila" />
+  <title>Git CMD</title>
+
+  <link href="./style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>A Git Command List</h1>
+    <a href="#main__content" class="navigate_btn">View command</a>
+  </header>
+  <section id="main__content" class="main__content">
+    <article>
+      <h1>Introduction</h1>
+      <p>
+        Before we start this command <b>list</b>. Here are some of the most
+        useful CMD or key actions that you can use on the CLI.
+      </p>
+
+      <ul>
+        <li>CTR-L = To clear screen in bash</li>
+        <li>ls = to list directory item</li>
+        <li>echo = print text on terminal</li>
+        <li>touch = Creates a file</li>
+        <li>mkdir = Create a directory</li>
+        <li>cd = Change directory</li>
+        <li>rmdir = remove directory</li>
+        <li>cat = creating new files</li>
+      </ul>
+
+      <p>
+        You can also install the <b>Github Desktop</b> even though we are
+        using a bash CLI here. just to make you familiarize how the Git work
+        first then the Github desktop later. Of course install the Git on your
+        local machine. 😉
+      </p>
+
+      <ul>
+        <li>
+          <a href="https://desktop.github.com/" target="_blank">https://desktop.github.com/</a>
+        </li>
+        <li>
+          <a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a>
+        </li>
+      </ul>
+
+      <p>
+        I highly recommend you to check out this git repository which is
+        called <b><u>firstcontributions</u></b> it is like a simple
+        walkthrough on how to work with git
+      </p>
+
+      <ul>
+        <li>
+          <a href="https://github.com/firstcontributions/first-contributions"
+            target="_blank">https://github.com/firstcontributions/first-contributions</a>
+        </li>
+      </ul>
+
+      <p>
+        Most of all ofcourse I want you to check this Git tutorial from
+        <b>Amigoscode</b> as this is where I got some of the idea to write
+        this page.
+      </p>
+
+      <ul>
+        <li>
+          <a href="https://youtu.be/3fUbBnN_H2c" target="_blank">Git and GitHub Tutorial For Beginners | Full Course
+            [2021]
+            [NEW]</a>
+        </li>
+      </ul>
+
+      <p>
+        Other Useful sites:
+      </p>
+
+      <ul>
+        <li><a href="https://learngitbranching.js.org/" target="_blank">https://learngitbranching.js.org/</a></li>
+        <li>
+          <a href="https://medium.datadriveninvestor.com/git-rebase-vs-merge-cc5199edd77c" target="_blank">
+            https://medium.datadriveninvestor.com/git-rebase-vs-merge-cc5199edd77c
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h1>Get started</h1>
+
+      <h2>How git works?</h2>
+
+      <p>
+        Here as we can see <b>git</b> only works in our local machine it is
+        like a <b>save point</b> to our file on what we have already done from
+        our directory. Now the <b>github </b>( also there many remote
+        repository like GitLab ) is our <b>remote repository</b> in where we
+        can share and <b>collaborate</b> with other people even though they
+        far.
+      </p>
+
+      <a href="https://youtu.be/3fUbBnN_H2c">
+        <img src="./model.png" alt="git model image" />
+        Amigoscode
+      </a>
+    </article>
+
+    <!-- 1 -->
+
+    <article>
+      <h1>Create a configuration on Git</h1>
+
+      <p>
+        Now to get started we need to setup our simple
+        <b>git configuration</b> in order to do that follow the cmd below:
+      </p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span>~git config --global user.name "anyname"</span>
+        <span>~git config --global user.email "email@email.com"</span>
+        <span>~git config --global color.ui auto</span>
+      </div>
+    </div>
+
+    <article>
+      <p>
+        👆 That creates a configuration about our git this includes our
+        <b>name, email, color of ui.</b> Too view all the option or help for
+        git configuration just type <b>"git config"</b>. Now since we save the
+        configuration we can view all the configuration we made using:
+      </p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span>~git config -l</span>
+      </div>
+    </div>
+
+    <!-- 2 -->
+
+    <article>
+      <h1>Create a new project in local machine</h1>
+
+      <h2>GIT Init</h2>
+
+      <p>
+        Now it is our first time to create our own local project in our
+        machine of course we can do by making a folder and inside of that
+        folder we add some files. go to your desired directory first then
+        create a folder inside or type below the command:
+      </p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span>cd ./Desktop</span>
+        <span>mkdir git-folder</span>
+        <span>cd ./git-folder</span>
+      </div>
+    </div>
+
+    <article>
+      <p>
+        👆 Here the first line is where we change our directory then in that
+        directory we make a folder name git-folder. Then we change our current
+        directory into that created directory which is the git-folder. Now in
+        order to make that directory as a working directory for our git we
+        need to do:
+      </p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> git init .</span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span>
+          <span class="cd__color2">git:(master)</span> ls -a</span>
+      </div>
+    </div>
+
+    <article>
+      <p>
+        👆 that will initiliaze our empty git repository. now we can issue
+        some git command here inside of that folder. Also note
+        <b>"git init ." only works on new project.</b> We can also view
+        <b>what's inside of working directory by typing "ls -a".</b> Now if we
+        remove the <b>.git</b> by doing:
+      </p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span>
+          <span class="cd__color2">git:(master)</span> rm -rf .git
+        </span>
+        <span><span class="cd__color1">git-folder</span> <span class="blinking__line">|</span></span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> git add</span>
+        <span>fatal: not a git repository (or any of the parent directories): .git</span>
+        <span><span class="cd__color1">git-folder</span> <span class="blinking__line">|</span></span>
+      </div>
+    </div>
+
+    <article>
+      <p>To fix that we have to do again the git init .</p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> git init .</span>
+      </div>
+    </div>
+
+    <!-- 3 -->
+
+    <article>
+      <h1>Adding our files into staging area</h1>
+
+      <h2>GIT Add</h2>
+
+      <p>Now what we want is to create a file inside on our working directory we do that by doing in windows
+        ( right-click / new / text document ) or by doing that touch command: </p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> touch index.html
+        </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> touch index.js
+        </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> touch main.css
+        </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> ls </span>
+        <span>index.html index.js main.css </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git status </span>
+        <span>On branch master</span>
+        <span>&nbsp;</span>
+        <span>No commits yet</span>
+        <span>&nbsp;</span>
+        <span>Untracked files:</span>
+        <span>(use "git add &lt;file&gt;..." to include in what will be committed )</span>
+        <span class="text__warn">index.html</span>
+        <span class="text__warn">index.js</span>
+        <span class="text__warn">main.css</span>
+        <span>&nbsp;</span>
+        <span>nothing added to commit but untrackted files present (use "git add" to track)</span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <article>
+      <p> <b>"git status"</b> shows the current state of your git working directory and staging area.</p>
+
+      <p>cmd that shown below is in order with example in order</p>
+
+      <hr>
+      <p>To <u>add</u> a file on staging area do <b>"git add"</b></p>
+      <p>To <u>remove</u> a file on staging area do <b>"git rm --cache &lt;file&gt;"</b> to unstage</p>
+      <p>To <u>add all file downward</u> on current directory <b>"git add ."</b></p>
+      <p>To <u>remove multiple file</u> in staging area <b>"git rm -r --cached ."</b> the -r means recursive.</p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git add index.html
+        </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git status </span>
+        <span>On branch master</span>
+        <span>&nbsp;</span>
+        <span>No commits yet</span>
+        <span>&nbsp;</span>
+        <span>Changes to be committed:</span>
+        <span>(use "git rm --cache &lt;file&gt;..." to unstage)</span>
+        <span class="text__ok">new file: index.html</span>
+        <span>&nbsp;</span>
+        <span>Untracked files:</span>
+        <span>(use "git add &lt;file&gt;..." to include in what will be committed)</span>
+        <span class="text__warn">index.js</span>
+        <span class="text__warn">main.css</span>
+        <span>&nbsp;</span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git rm --cache
+          index.html </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git add . </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git rm -r --cache
+          .</span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+
+    <article>
+      <p>Now <b>"git add ."</b> only works if all of our file is inside of our own current directory but what if we use
+        the "git add ." while
+        we are inside of another folder of our current directory?</p>
+
+      <p>Let us first create another folder and a file inside of our local repository</p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> mkdir test</span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> cd test</span>
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> touch test.js</span>
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> git status</span>
+        <span>On branch master</span>
+        <span>&nbsp;</span>
+        <span>No commits yet</span>
+        <span>&nbsp;</span>
+        <span>Untracked files:</span>
+        <span>(use "git add &lt;file&gt;..." to include in what will be committed)</span>
+        <span class="text__warn">../index.html</span>
+        <span class="text__warn">../index.js</span>
+        <span class="text__warn">../main.css</span>
+        <span class="text__warn">./</span>
+        <span>&nbsp;</span>
+        <span>nothing added to commit but untrackted files present (use &lt;git add&gt; to track)</span>
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> git add .</span>
+        <span>On branch master</span>
+        <span>&nbsp;</span>
+        <span>No commits yet</span>
+        <span>&nbsp;</span>
+        <span>Changes to be committed:</span>
+        <span>(use "git rm --cache &lt;file&gt;..." to unstage)</span>
+        <span class="text__ok">new file: test.js</span>
+        <span>&nbsp;</span>
+        <span>Untracked files:</span>
+        <span>(use "git add &lt;file&gt;..." to include in what will be committed)</span>
+        <span class="text__warn">../index.html</span>
+        <span class="text__warn">../index.js</span>
+        <span class="text__warn">../main.css</span>
+        <span>&nbsp;</span>
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> <span
+            class="blinking__line">|</span> </span>
+      </div>
+    </div>
+
+    <article>
+      <p>If we are inside of another folder <b>we can't "git add ." the outside file</b> if
+        we use the "git add ." previous directory file is not added to staging and only the current folder that we are
+        in.</p>
+
+      <p>To <b>add all changes</b> on staging area we do: <b>"git add -A"</b> -A must be in capital</p>
+    </article>
+
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git add -A</span>
+      </div>
+    </div>
+
+
+    <!-- 4 -->
+    <article>
+      <h1>From Staging area to Commit</h1>
+      <h2>GIT Commit</h2>
+
+      <p>Now that we know how to add all of our changes in our staging area it is now time to save (save point) it in
+        our local machine by doing the <b>"git commit".</b></p>
+      <p>We can have many commit as long as we want to commit.</p>
+    </article>
+
+    <div class="window__cmd--black">
+      <div class="header__cmd">
+        <ul>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+          <li>&nbsp;</li>
+        </ul>
+      </div>
+      <div class="body__cmd">
+        <span><span class="cd__color1">test</span> <span class="cd__color2">git:(master)</span> cd ../ </span>
+        <span><span class="cd__color1">git-folder</span> <span class="cd__color2">git:(master)</span> git commit -m
+          "bootstrap project"<span class="blinking__line">|</span></span>
+      </div>
+    </div>
+
+
+
+    <article>
+      <h1>Summary</h1>
+
+      <h2>CMD list for GIT and GITHUB</h2>
+
+      <ul class="cmd__list-summary">
+        <li><span class="bg__cmd-prompt">git config</span> - create configuration for git</li>
+        <li><span class="bg__cmd-prompt">git config -l</span> - view configuration of git</li>
+        <li><span class="bg__cmd-prompt">git status</span> - To check the status of current directory and staging area:
+        </li>
+        <li><span class="bg__cmd-prompt">git init</span> - Initialize folder as working directory for git</li>
+        <li><span class="bg__cmd-prompt">git add .</span> - Add all file in the current directory to staging area</li>
+        <li><span class="bg__cmd-prompt">git rm --cached &lt;file&gt;</span> - To unstage file</li>
+        <li><span class="bg__cmd-prompt">git add -A</span> - Add all file event the previous directory (whole working
+          directory) to staging area </li>
+        <li><span class="bg__cmd-prompt">git commit -m "message here"</span> - Commit the stage file (save point)</li>
+        <li><span class="bg__cmd-prompt">git log</span> - Check all of our commit status in branch</li>
+        <li><span class="bg__cmd-prompt">git log --oneline</span> - View all our commit status in branch that look like
+          one line</li>
+        <li><span class="bg__cmd-prompt">git show &lt;hash&gt;</hash></span> - To view all the files in commit we can
+          use the hash commit from git log</li>
+        <li><span class="bg__cmd-prompt">git diff</span> - view the changes or different from current to previous file
+        </li>
+        <li><span class="bg__cmd-prompt">git restore</span> - restore and discard the changes on file using our last
+          commit (save point)</li>
+        <li><span class="bg__cmd-prompt">git commit --amend -m "message for new amended commit"</span> - If we make make
+          mistake from our commit we can change it then save it without creating a new commit</li>
+        <li><span class="bg__cmd-prompt">git config</span> - create configuration for git</li>
+        <li>
+          <span class="bg__cmd-prompt">
+            -git remote add origin &lt;url&gt;<br>
+            -git branch -M main<br>
+            -git push -u origin main<br>
+          </span>
+          - To push an existing repository to github
+        </li>
+        <li><span class="bg__cmd-prompt">git branch -M main</span> - To rename the master branch from main branch </li>
+        <li><span class="bg__cmd-prompt">git branch</span> - To view all branch </li>
+        <li><span class="bg__cmd-prompt">git branch -r</span> - To view all branch on remote repository</li>
+        <li><span class="bg__cmd-prompt">git branch -a</span> - To view all branches on local and remote repository</li>
+        <li><span class="bg__cmd-prompt">git branch &lt;branch-name&gt;</span> - To create a new branch </li>
+        <li><span class="bg__cmd-prompt">git checkout &lt;branch-name&gt;</span> - To switch between branch </li>
+        <li><span class="bg__cmd-prompt">git switch &lt;branch-name&gt;</span> - To switch between branch </li>
+        <li><span class="bg__cmd-prompt">git checkout -</span> - To switch on previous branch </li>
+        <li><span class="bg__cmd-prompt">git switch -</span> - To switch on previous branch </li>
+        <li><span class="bg__cmd-prompt">git checkout -b &lt;branch-name&gt;</span> - This create a new branch then
+          after that switch to this branch </li>
+        <li><span class="bg__cmd-prompt">git checkout -d &lt;branch-name&gt;</span> - To delete a branch </li>
+        <li><span class="bg__cmd-prompt">git push -u origin &lt;branch-name&gt;</span> - To push a repository on remote
+        </li>
+        <li><span class="bg__cmd-prompt">git push --set-upstream origin feature-a</span> - To push a new branch along
+          with its file or you can use cmd "git push -u origin &lt;branch-name&gt;" </li>
+        <li><span class="bg__cmd-prompt">git pull <branch></span> - To pull an update on remote repository to local repo
+        </li>
+        <li><span class="bg__cmd-prompt">git merge &lt;branch-name&gt; <span class="warn__prompt">⚠️ Don't use this
+              instead create a pull request</span></span> - Merge main branch and current branch </li>
+        <li><span class="bg__cmd-prompt">git pull -r origin main <span class="warn__prompt">OR</span> git pull --rebase
+            origin main </span> - To pull and rebase from main branch to current working branch </li>
+        <li><span class="bg__cmd-prompt">git rebase --continue</span> - After fixing conflict continue rebase </li>
+        <li><span class="bg__cmd-prompt">git merge --continue</span> - After fixing conflict between merging then
+          continue </li>
+        <li><span class="bg__cmd-prompt">git merge --abort</span> - Abort merging if we don't want to fix conflict </li>
+        <li><span class="bg__cmd-prompt">git reset --soft HEAD^</span> - Undo commit and keep the files (Also view the
+          other option for --soft) </li>
+      </ul>
+    </article>
+  </section>
+</body>
+
+</html>

@@ -1,3 +1,5 @@
+SITE: [Git Site]: https://git-cmd.netlify.app/
+
 TITLE: CMD in git
 
 ~git config --global user.name "anyname"
